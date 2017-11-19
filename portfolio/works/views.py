@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.views
+from django.views.generic import ListView
 
-# Create your views here.
-class WorkGalleryView():
-    pass
+from .models.gallery import Gallery
+
+
+class MainGalleryView(ListView):
+    model = Gallery
