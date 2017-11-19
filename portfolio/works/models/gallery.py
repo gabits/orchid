@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Gallery(models.Model):
+    theme = models.CharField()
+
+
+class GallerySection(models.Model):
+    gallery = models.ForeignKey(Gallery, related_name='sections')
