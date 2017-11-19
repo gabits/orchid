@@ -7,5 +7,7 @@ class AbstractPortfolioWork(models.Model):
     """
     title = models.CharField(max_lenght=255)
     description = models.TextField()
+
     creation_date = models.DateField()
     uploaded_at = models.DateTimeField()
+
