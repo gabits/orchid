@@ -2,7 +2,14 @@ from django.db import models
 
 
 # class Gallery(models.Model):
-#     theme = models.CharField(null=True)
+#     gallery_theme = models.CharField(null=True)
+#
+#     class Meta:
+#         verbose_name = 'gallery'
+#         verbose_name_plural = 'galleries'
+#
+#     def __str__(self):
+#         return 'Gallery'
 
 
 class GallerySection(models.Model):
