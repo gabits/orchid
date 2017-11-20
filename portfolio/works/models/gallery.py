@@ -18,7 +18,7 @@ class Gallery(models.Model):
 
 
 class GallerySection(models.Model):
-    # gallery = models.ForeignKey(Gallery, related_name='sections', null=True, on_delete=True)
+    gallery = models.ForeignKey(Gallery, related_name='sections', null=True)
     title = models.CharField(max_length=120, null=True)
 
     class Meta:
