@@ -3,14 +3,21 @@ from .work import AbstractPortfolioWork
 
 
 class BaseImageWork(AbstractPortfolioWork):
+    """Contains an url to a visual piece of work it refers to.
+    """
+
     image_url = models.CharField(max_length=255)
 
 
 class BaseAudiovisualWork(AbstractPortfolioWork):
-    video_url = models.CharField(max_length=255)
+    """Contains an url to an audiovisual piece of work it refers to.
+    """
+
+    audiovisual_url = models.CharField(max_length=255)
 
 
 class Photograph(BaseImageWork):
+
     class Meta:
         verbose_name = 'photograph'
         verbose_name_plural = 'photographs'
@@ -18,6 +25,7 @@ class Photograph(BaseImageWork):
 
 
 class Video(BaseAudiovisualWork):
+
     class Meta:
         verbose_name = 'video'
         verbose_name_plural = 'videos'

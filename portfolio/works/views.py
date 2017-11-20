@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 
-from works.models.media import Photograph
+from .models.media import Photograph
 from .models.gallery import GallerySection
 
 
