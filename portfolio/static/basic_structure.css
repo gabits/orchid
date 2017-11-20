@@ -2,13 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-    /* Background */
-    background-color: #ff8b9e;
 
+* {
     /* Font */
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     font-size: 14px;
     font-color: #217a6e;
+
+}
+
+
+html {
+    /* Background */
+    background-color: #ff8b9e;
 }

@@ -1,20 +1,29 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Gabriela M Valle">
-    <meta mame="keywords" content="portfolio, work, art, web development, code">
 
-    {% load staticfiles %}
-    {% static 'main.css' %}
+    <!--TODO: make description, keywords and title "less hardcoded"-->
+    <meta name="author" content="Gabriela M Valle">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="portfolio, work, art, web development, code">
+
+    <!-- Styling -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 
     <title>Gallery</title>
 </head>
 
+
 <body>
+<main>
 
     {% block content %}
     {% endblock %}
 
+</main>
 </body>
 </html>
