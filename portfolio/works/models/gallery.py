@@ -2,7 +2,8 @@ from django.db import models
 
 
 class Gallery(models.Model):
-    """A Gallery is an instance that contains sections, which will contain works to be displayed.
+    """A Gallery is an instance that contains sections, which will contain works
+    to be displayed.
     It has a title that will identify it, i.e. Colors Study Gallery.
     """
 
@@ -22,8 +23,8 @@ class Gallery(models.Model):
 
 
 class GallerySection(models.Model):
-    """Section of a specific gallery, containing a theme and an optional description, and it's linked
-    to PortfolioWork's it'll display.
+    """Section of a specific gallery, containing a theme and an optional
+    description, and it's linked to PortfolioWork's it'll display.
     """
 
     gallery = models.ForeignKey(Gallery, related_name='sections', null=True)
