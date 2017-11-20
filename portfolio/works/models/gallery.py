@@ -1,15 +1,20 @@
 from django.db import models
 
 
-# class Gallery(models.Model):
-#     gallery_theme = models.CharField(null=True)
-#
-#     class Meta:
-#         verbose_name = 'gallery'
-#         verbose_name_plural = 'galleries'
-#
-#     def __str__(self):
-#         return 'Gallery'
+class Gallery(models.Model):
+    theme = models.CharField(max_length=255, null=True)
+
+    class Meta:
+        verbose_name = 'gallery'
+        verbose_name_plural = 'galleries'
+        db_table = 'gallery'
+
+    def __str__(self):
+        return 'Gallery'
+
+    def __repr__(self):
+        return '<%s: %s>' % (self.__class__.__name__,
+                             self.theme)
 
 
 class GallerySection(models.Model):
