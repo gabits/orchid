@@ -10,7 +10,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('works', '0002_abstractportfoliowork_baseimagework_photograph'),
+        ('works', '0002_media_image_models'),
     ]
 
     operations = [
