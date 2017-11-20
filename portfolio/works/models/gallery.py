@@ -1,13 +1,13 @@
 from django.db import models
 
 
-class Gallery(models.Model):
-    theme = models.CharField()
+# class Gallery(models.Model):
+#     theme = models.CharField(null=True)
 
 
 class GallerySection(models.Model):
-    gallery = models.ForeignKey(Gallery, related_name='sections')
-    title = models.CharField(max_length=120)
+    # gallery = models.ForeignKey(Gallery, related_name='sections', null=True, on_delete=True)
+    title = models.CharField(max_length=120, null=True)
 
     class Meta:
         verbose_name = 'gallery_section'
@@ -21,10 +21,10 @@ class GallerySection(models.Model):
 
     def __str__(self):
         return '{title} section in gallery {gallery}'.format(title=self.title,
-                                                             gallery=self.gallery)
+                                                             gallery='test')
 
     def __repr__(self):
         return '<%s %s: %s %s>' % (self.title,
                                    self.__class__.__name__,
-                                   super().__name___,
-                                   self.gallery)
+                                   'name',
+                                   'test')
