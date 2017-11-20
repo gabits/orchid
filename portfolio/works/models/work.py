@@ -10,4 +10,4 @@ class AbstractPortfolioWork(models.Model):
     description = models.TextField(null=True)
 
     creation_date = models.DateField(null=True)
-    uploaded_at = models.DateTimeField(null=True, default=timezone.now())
+    uploaded_at = models.DateTimeField(null=True)
