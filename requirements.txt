@@ -3,7 +3,7 @@ Django==1.11.6
 django-configurations==2.0
 
 # Environment and path management
-environ==1.0
+django-environ==0.4.4
 
 # Postgres compatibility
 psycopg2==2.7.3.2
