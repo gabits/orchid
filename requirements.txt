@@ -1,12 +1,29 @@
+#
 # Django
+#
+
 Django==1.11.6
 django-configurations==2.0
 
-# Environment and path management
-django-environ==0.4.4
 
-# Postgres compatibility
+#
+# Environment and path management
+#
+
+django-environ==0.4.4
+# dependencies
+six==1.11.0
+
+s
+#
+# Postgres
+#
+
 psycopg2==2.7.3.2
 
+
+#
 # Timezone calculation
+#
+
 pytz==2017.2
