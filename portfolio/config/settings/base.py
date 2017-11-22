@@ -5,7 +5,7 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
-    BASE_DIR = Path(__file__) - 2           # orchid/portfolio/config/settings/base.py - 2 = orchid/portfolio/
+    BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
 
     # TODO: make secret key an environment variable
     SECRET_KEY = '45bxd8829mw$r6fd2$i6m!rud$2gujog$wpabo*%bqq*6u@nq4'
@@ -106,7 +106,7 @@ class BaseConfiguration(Configuration):
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-    STATIC_URL = 'portfolio/static/'
+    STATIC_URL = '/static/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
         os.path.join(str(BASE_DIR), 'static'),
