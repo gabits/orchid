@@ -1,3 +1,5 @@
 {% block content %}
-    {% include 'section_list.html' %}
+    {% for section in object.sections %}
+        {% include 'section_list.html' %}
+    {% endfor %}
 {% endblock %}

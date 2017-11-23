@@ -1,5 +1,5 @@
-{% for section in object.sections %}
-    <section class="{{ section.css_class }}">
+{% block content %}
+    <section class="{{ object.css_class }}">
         {% include "section_detail.html" %}
     </section>
-{% endfor %}
+{% endblock %}

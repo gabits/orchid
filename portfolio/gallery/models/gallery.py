@@ -9,6 +9,8 @@ class Gallery(models.Model):
 
     title = models.CharField(max_length=255, null=True)
 
+    css_class = models.CharField(max_length=255, null=True)
+
     class Meta:
         verbose_name = 'gallery'
         verbose_name_plural = 'galleries'
