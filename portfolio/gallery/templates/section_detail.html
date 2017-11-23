@@ -1,0 +1,9 @@
+{% block content %}
+    {% for work in object.works %}
+        <!-- For now, the idea is that within a section all works have the same styling and
+        child elements that derive style from parent element are specified in the CSS -->
+        <article class="{{ work.verbose_name }}">
+            {% include 'works_list.html' %}
+        </article>
+    {% endfor %}
+{% endblock %}
