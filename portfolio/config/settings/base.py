@@ -25,7 +25,7 @@ class BaseConfiguration(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        # Project apps, according to dependency cain
+        # Project apps, according to dependency chain
         'works',
         'gallery',
     ]
@@ -57,6 +57,8 @@ class BaseConfiguration(Configuration):
             },
         },
     ]
+
+    TEMPLATE_DIRS = (BASE_DIR + '/templates/',)
 
     WSGI_APPLICATION = 'config.wsgi.application'
 
