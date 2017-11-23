@@ -1,6 +1,6 @@
 from django.db import models
 
-from .gallery import GallerySection
+from gallery.models.sections import GallerySection
 
 
 class AbstractPortfolioWork(models.Model):

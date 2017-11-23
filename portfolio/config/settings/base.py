@@ -25,7 +25,9 @@ class BaseConfiguration(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        # Project apps, according to dependency cain
         'works',
+        'gallery',
     ]
 
     MIDDLEWARE = [
