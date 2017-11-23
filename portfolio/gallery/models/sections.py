@@ -11,6 +11,10 @@ class GallerySection(models.Model):
     gallery = models.ForeignKey(Gallery, related_name='sections', null=True)
     theme = models.CharField(max_length=120, null=True)
 
+    # Styling purposes; still don't know if it's a good idea and will
+    # depend on further thoughts for UI implementation.
+    css_class = models.CharField(max_length=50, null=True)
+
     class Meta:
         verbose_name = 'gallery_section'
         verbose_name_plural = 'gallery_sections'

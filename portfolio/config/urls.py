@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^$', RedirectView.as_view(url=reverse_lazy('gallery'), permanent=False), name='home'),
-    url(r'^gallery/', include('gallery.urls')),
+    url(r'^gallery', include('gallery.urls')),
 ]

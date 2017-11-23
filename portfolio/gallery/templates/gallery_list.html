@@ -2,7 +2,9 @@
 {% block content %}
 <p>
     {% for gallery in object_list %}
-        <span>Object {{ gallery.id }}</span>
+        <section class="gallery">
+            {% include 'gallery_detail.html' %}
+        </section>
     {% endfor %}
 </p>
 {% endblock %}

@@ -1,0 +1,5 @@
+{% for section in object.sections %}
+    <section class="{{ section.css_class }}">
+        {% include "section_detail.html" %}
+    </section>
+{% endfor %}

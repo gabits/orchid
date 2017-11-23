@@ -45,7 +45,8 @@ class BaseConfiguration(Configuration):
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [],
+            'DIRS': [(BASE_DIR + 'templates/'),
+                     (BASE_DIR + 'common/templates/')],
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
@@ -58,7 +59,7 @@ class BaseConfiguration(Configuration):
         },
     ]
 
-    TEMPLATE_DIRS = (BASE_DIR + '/templates/',)
+    TEMPLATE_DIRS = ()
 
     WSGI_APPLICATION = 'config.wsgi.application'
 
