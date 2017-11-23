@@ -1,22 +1,21 @@
-import os
+from os.path import join
 from environ import Path
 from configurations import Configuration, values
 
 
 class BaseConfiguration(Configuration):
 
+    PROJECT_NAME = 'Portfolio'
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
+    ROOT_URLCONF = 'config.urls'
+    WSGI_APPLICATION = 'config.wsgi.application'
 
     # TODO: make secret key an environment variable
     SECRET_KEY = '45bxd8829mw$r6fd2$i6m!rud$2gujog$wpabo*%bqq*6u@nq4'
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
-
-    ALLOWED_HOSTS = ['*']
-
-
-    # Application definition
+    DEBUG = values.Value(environ_prefix=None, default=False)
+    ALLOWED_HOSTS = values.ListValue(['*'])
 
     INSTALLED_APPS = [
         'django.contrib.admin',
@@ -25,7 +24,7 @@ class BaseConfiguration(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        # Project apps, according to dependency chain
+        # Project apps by dependancy chain
         'works',
         'gallery',
     ]
@@ -39,8 +38,6 @@ class BaseConfiguration(Configuration):
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
-
-    ROOT_URLCONF = 'config.urls'
 
     TEMPLATES = [
         {
@@ -58,11 +55,6 @@ class BaseConfiguration(Configuration):
             },
         },
     ]
-
-    TEMPLATE_DIRS = ()
-
-    WSGI_APPLICATION = 'config.wsgi.application'
-
 
     # Database
     DATABASES = {
@@ -114,5 +106,5 @@ class BaseConfiguration(Configuration):
     STATIC_URL = '/static/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
-        os.path.join(str(BASE_DIR), 'static'),
+        join(str(BASE_DIR), 'static'),
     ]
