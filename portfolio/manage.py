@@ -1,26 +1,35 @@
 #!/usr/bin/env python
 import os
 import sys
+# from .common.scripts.get_configuration import discover_configuration
+
+#
+# def return_configuration(config):
+#     path = 'config.settings.' + config
+#     cls = config[0].upper() + config[1:]
+#     return path, cls
+#
+# def discover_configuration():
+#     # TODO: Once there's a definition of where it'll run there'll be more logic to be added here and even changed.
+#     if 'runserver' in sys.argv:
+#         config = 'local'
+#     return return_configuration(config)
+
+
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.base")
-    os.environ.setdefault("DJANGO_CONFIGURATION", "BaseConfiguration")
+    # path, cls = discover_configuration()
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", path)
+    # os.environ.setdefault("DJANGO_CONFIGURATION", cls)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'config.settings.local')
+    os.environ.setdefault("DJANGO_CONFIGURATION", 'Local')
 
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError:
-        # The above import may fail for some other reason. Ensure that the
-        # issue is really that Django is missing to avoid masking other
-        # exceptions on Python 2.
-        try:
-            import django
-        except ImportError:
-            raise ImportError(
-                "Couldn't import Django. Are you sure it's installed and "
-                "available on your PYTHONPATH environment variable? Did you "
-                "forget to activate a virtual environment?"
-            )
-        raise
-    from configurations.management import execute_from_command_line
+    # # Get environment variables from env file
+    # try:
+    #     import dotenv
+    #     dotenv.read_dotenv()
+    # except ImportError:
+    #     dotenv = None
+
+    from django.core.management import execute_from_command_line
     execute_from_command_line(sys.argv)
-
