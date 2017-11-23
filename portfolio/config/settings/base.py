@@ -5,6 +5,8 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
+    DJANGO_SETTINGS_MODULE = 'config.settings'
+
     PROJECT_NAME = 'Portfolio'
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
     ROOT_URLCONF = 'config.urls'
