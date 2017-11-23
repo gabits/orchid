@@ -14,7 +14,7 @@ class BaseConfiguration(Configuration):
     SECRET_KEY = '45bxd8829mw$r6fd2$i6m!rud$2gujog$wpabo*%bqq*6u@nq4'
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = values.Value(environ_prefix=None, default=False)
+    DEBUG = values.Value(environ_prefix=None, default=True)
     ALLOWED_HOSTS = values.ListValue(['*'])
 
     INSTALLED_APPS = [
