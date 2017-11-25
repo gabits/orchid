@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 import os
 import sys
-from .config.get_configuration import discover_configuration
+from config.get_configuration import discover_configuration
 
 
 if __name__ == "__main__":
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
+    os.environ.setdefault('DJANGO_CONFIGURATION', 'Local')
+
     path, cls = discover_configuration()
     DJANGO_SETTINGS_MODULE = path
     DJANGO_CONFIGURATION = cls
