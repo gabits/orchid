@@ -1,6 +1,6 @@
 from django.db import models
 
-from gallery.models.sections import GallerySection
+from ...gallery.models.sections import GallerySection
 
 
 class AbstractPortfolioWork(models.Model):
@@ -14,7 +14,7 @@ class AbstractPortfolioWork(models.Model):
     creation_date = models.DateField(null=True)
     uploaded_at = models.DateTimeField(null=True)
 
-    sections = models.ManyToManyField(GallerySection)
+    sections = models.ManyToManyField(GallerySection, null=True)
 
     def __str__(self):
         raise NotImplementedError

@@ -17,17 +17,22 @@ class BaseConfiguration(Configuration):
     DEBUG = values.Value(environ_prefix=None, default=True)
     ALLOWED_HOSTS = values.ListValue(['*'])
 
-    INSTALLED_APPS = [
+    DJANGO_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        # Project apps by dependancy chain
+    ]
+
+    CUSTOM_APPS = [
+        # Project apps by dependency chain
         'works',
         'gallery',
     ]
+
+    INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',

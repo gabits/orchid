@@ -8,7 +8,6 @@ class GallerySection(models.Model):
     description, and it's linked to PortfolioWork's it'll display.
     """
 
-    gallery = models.ForeignKey(Gallery, related_name='sections', null=True)
     theme = models.CharField(max_length=120, null=True)
 
     # Styling purposes; still don't know if it's a good idea and will
