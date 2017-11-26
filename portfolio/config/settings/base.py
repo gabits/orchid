@@ -5,17 +5,21 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
+    # Project config and path
     PROJECT_NAME = 'Portfolio'
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
     ROOT_URLCONF = 'config.urls'
     WSGI_APPLICATION = 'config.wsgi.application'
 
     # TODO: make secret key an environment variable
-    SECRET_KEY = '45bxd8829mw$r6fd2$i6m!rud$2gujog$wpabo*%bqq*6u@nq4'
+    SECRET_KEY = 'TEST'
 
-    # SECURITY WARNING: don't run with debug turned on in production!
+    # Development configuration
     DEBUG = values.Value(environ_prefix=None, default=True)
     ALLOWED_HOSTS = values.ListValue(['*'])
+
+
+    # Apps
 
     DJANGO_APPS = [
         'django.contrib.admin',
@@ -34,6 +38,7 @@ class BaseConfiguration(Configuration):
 
     INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
+
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
@@ -43,6 +48,7 @@ class BaseConfiguration(Configuration):
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
+
 
     TEMPLATES = [
         {
@@ -61,7 +67,8 @@ class BaseConfiguration(Configuration):
         },
     ]
 
-    # Database
+
+    # Databases
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -73,8 +80,6 @@ class BaseConfiguration(Configuration):
 
 
     # Password validation
-    # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
-
     AUTH_PASSWORD_VALIDATORS = [
         {
             'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -92,22 +97,14 @@ class BaseConfiguration(Configuration):
 
 
     # Internationalization
-    # https://docs.djangoproject.com/en/1.11/topics/i18n/
-
     LANGUAGE_CODE = 'en-gb'
-
-    TIME_ZONE = 'UTC'
-
     USE_I18N = True
-
     USE_L10N = True
-
+    TIME_ZONE = 'UTC'
     USE_TZ = True
 
 
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+    # Static files
     STATIC_URL = '/static/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
