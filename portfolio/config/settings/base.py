@@ -28,8 +28,8 @@ class BaseConfiguration(Configuration):
 
     CUSTOM_APPS = [
         # Project apps by dependency chain
-        'works',
         'gallery',
+        'works',
     ]
 
     INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS

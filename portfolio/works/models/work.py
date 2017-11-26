@@ -1,20 +1,21 @@
 from django.db import models
 
-from ...gallery.models.sections import GallerySection
+from gallery.models.sections import GallerySection
 
 
 class AbstractPortfolioWork(models.Model):
     """An instance to define and contain information about the work exposed,
     which can have different GallerySection's it belongs to.
     """
+    class Meta:
+        abstract = True
+        app_label = 'works'
 
     title = models.CharField(max_length=255, null=True)
     description = models.TextField(null=True)
 
     creation_date = models.DateField(null=True)
     uploaded_at = models.DateTimeField(null=True)
-
-    sections = models.ManyToManyField(GallerySection, null=True)
 
     def __str__(self):
         raise NotImplementedError
@@ -32,3 +33,9 @@ class AbstractPortfolioWork(models.Model):
             - A Boolean value
         """
         raise NotImplementedError
+
+
+class BasePortfolioWork(AbstractPortfolioWork):
+    """Some common implementation for all PortfolioWork types of object.
+    """
+    sections = models.ManyToManyField(GallerySection, null=True)

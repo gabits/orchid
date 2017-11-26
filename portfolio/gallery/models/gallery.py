@@ -15,6 +15,7 @@ class Gallery(models.Model):
         verbose_name = 'gallery'
         verbose_name_plural = 'galleries'
         db_table = 'gallery'
+        app_label = 'gallery'
 
     def __str__(self):
         return 'Gallery'
