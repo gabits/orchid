@@ -1,3 +1,6 @@
+import os
+import sys
+
 from os.path import join
 from environ import Path
 from configurations import Configuration, values
@@ -5,21 +8,21 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
-    # Project config and path
+    DJANGO_SETTINGS_MODULE = values.Value(environ_prefix=None, default='config.settings.local')
+
     PROJECT_NAME = 'Portfolio'
+
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
     ROOT_URLCONF = 'config.urls'
     WSGI_APPLICATION = 'config.wsgi.application'
 
     # TODO: make secret key an environment variable
-    SECRET_KEY = 'TEST'
+    SECRET_KEY = values.Value(environ_prefix=None, default='LOCAL')
 
     # Development configuration
-    DEBUG = values.Value(environ_prefix=None, default=False)
+    DEBUG = values.BooleanValue(environ_prefix=None, default=False)
+
     ALLOWED_HOSTS = values.ListValue(['*'])
-
-
-    # Apps
 
     DJANGO_APPS = [
         'django.contrib.admin',
@@ -49,7 +52,7 @@ class BaseConfiguration(Configuration):
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
-
+    
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -67,8 +70,7 @@ class BaseConfiguration(Configuration):
         },
     ]
 
-
-    # Databases
+    # Data storage
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -96,7 +98,7 @@ class BaseConfiguration(Configuration):
     ]
 
 
-    # Internationalization
+    # Internationalisation
     LANGUAGE_CODE = 'en-gb'
     USE_I18N = True
     USE_L10N = True
