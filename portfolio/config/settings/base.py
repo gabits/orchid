@@ -1,5 +1,6 @@
 import os
 import sys
+
 from os.path import join
 from environ import Path
 from configurations import Configuration, values
@@ -10,28 +11,36 @@ class BaseConfiguration(Configuration):
     DJANGO_SETTINGS_MODULE = 'config.settings'
 
     PROJECT_NAME = 'Portfolio'
+
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
     ROOT_URLCONF = 'config.urls'
     WSGI_APPLICATION = 'config.wsgi.application'
 
     # TODO: make secret key an environment variable
-    SECRET_KEY = '45bxd8829mw$r6fd2$i6m!rud$2gujog$wpabo*%bqq*6u@nq4'
+    SECRET_KEY = values.Value(environ_prefix=None, default='LOCAL')
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = values.Value(environ_prefix=None, default=False)
     ALLOWED_HOSTS = values.ListValue(['*'])
 
-    INSTALLED_APPS = [
+    DJANGO_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        # Project apps by dependancy chain
+    ]
+
+    CUSTOM_APPS = [
+        # Project apps by dependency chain
         'works',
         'gallery',
+        'works',
     ]
+
+    INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
+
 
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
@@ -43,6 +52,7 @@ class BaseConfiguration(Configuration):
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
+    
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -60,7 +70,7 @@ class BaseConfiguration(Configuration):
         },
     ]
 
-    # Database
+    # Data storage
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -72,8 +82,6 @@ class BaseConfiguration(Configuration):
 
 
     # Password validation
-    # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
-
     AUTH_PASSWORD_VALIDATORS = [
         {
             'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -90,23 +98,15 @@ class BaseConfiguration(Configuration):
     ]
 
 
-    # Internationalization
-    # https://docs.djangoproject.com/en/1.11/topics/i18n/
-
+    # Internationalisation
     LANGUAGE_CODE = 'en-gb'
-
-    TIME_ZONE = 'UTC'
-
     USE_I18N = True
-
     USE_L10N = True
-
+    TIME_ZONE = 'UTC'
     USE_TZ = True
 
 
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+    # Static files
     STATIC_URL = '/static/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
