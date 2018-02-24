@@ -1,22 +1,23 @@
 from django.db import models
-from .work import AbstractPortfolioWork
+from .work import AbstractContent
 
 
-class BaseImageWork(AbstractPortfolioWork):
+class BaseImageContent(AbstractContent):
     """Contains an url to a visual piece of work it refers to.
     """
 
+    # TODO: instead of an url, store images using a Django field.
     image_url = models.CharField(max_length=255)
 
 
-class BaseAudiovisualWork(AbstractPortfolioWork):
+class BaseAudiovisualContent(AbstractContent):
     """Contains an url to an audiovisual piece of work it refers to.
     """
-
+    # TODO: implement video stream and audio reproduction instead of pointing to an URL.
     audiovisual_url = models.CharField(max_length=255)
 
 
-class Photograph(BaseImageWork):
+class Photograph(BaseImageContent):
 
     class Meta:
         verbose_name = 'photograph'
@@ -24,7 +25,7 @@ class Photograph(BaseImageWork):
         db_table = 'photograph'
 
 
-class Video(BaseAudiovisualWork):
+class Video(BaseAudiovisualContent):
 
     class Meta:
         verbose_name = 'video'

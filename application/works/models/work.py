@@ -3,7 +3,7 @@ from django.db import models
 from gallery.models.sections import GallerySection
 
 
-class AbstractPortfolioWork(models.Model):
+class AbstractContent(models.Model):
     """An instance to define and contain information about the work exposed,
     which can have different GallerySection's it belongs to.
     """
@@ -35,7 +35,7 @@ class AbstractPortfolioWork(models.Model):
         raise NotImplementedError
 
 
-class BasePortfolioWork(AbstractPortfolioWork):
+class BasePortfolioWork(AbstractContent):
     """Some common implementation for all PortfolioWork types of object.
     """
     sections = models.ManyToManyField(GallerySection, null=True)
