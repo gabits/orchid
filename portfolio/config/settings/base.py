@@ -8,7 +8,7 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
-    DJANGO_SETTINGS_MODULE = 'config.settings'
+    DJANGO_SETTINGS_MODULE = values.Value(environ_prefix=None, default='config.settings.local')
 
     PROJECT_NAME = 'Portfolio'
 
@@ -20,7 +20,7 @@ class BaseConfiguration(Configuration):
     SECRET_KEY = values.Value(environ_prefix=None, default='LOCAL')
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = values.Value(environ_prefix=None, default=False)
+    DEBUG = values.BooleanValue(environ_prefix=None, default=False)
     ALLOWED_HOSTS = values.ListValue(['*'])
 
     DJANGO_APPS = [
@@ -34,7 +34,6 @@ class BaseConfiguration(Configuration):
 
     CUSTOM_APPS = [
         # Project apps by dependency chain
-        'works',
         'gallery',
         'works',
     ]
