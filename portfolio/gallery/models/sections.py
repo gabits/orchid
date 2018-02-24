@@ -1,7 +1,5 @@
 from django.db import models
 
-from .gallery import Gallery
-
 
 class GallerySection(models.Model):
     """Section of a specific gallery, containing a theme and an optional
@@ -18,6 +16,7 @@ class GallerySection(models.Model):
         verbose_name = 'gallery_section'
         verbose_name_plural = 'gallery_sections'
         db_table = 'gallery_sections'
+        app_label = 'gallery'
 
         permissions = (
             ('create_section', 'Can create a new section in the gallery'),
