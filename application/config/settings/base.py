@@ -108,8 +108,10 @@ class BaseConfiguration(Configuration):
 
 
     # Static files
-    STATIC_URL = '/static/'
+    STATIC_URL = '/static/build/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
-        join(str(BASE_DIR), 'static'),
+        join(str(BASE_DIR), 'static/files'),
     ]
+
+    STATIC_ROOT = str(BASE_DIR) + '/static/build'
