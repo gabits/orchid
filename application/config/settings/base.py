@@ -35,6 +35,7 @@ class BaseConfiguration(Configuration):
 
     CUSTOM_APPS = [
         # Project apps by dependency chain
+        'dashboard',
         'gallery',
         'works',
     ]

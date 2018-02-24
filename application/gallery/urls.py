@@ -6,5 +6,5 @@ from .views import GalleriesListView
 
 
 urlpatterns = [
-    url(r'^$', GalleriesListView.as_view(), name='gallery'),
+    url(r'gallery', GalleriesListView.as_view(), name='gallery'),
 ]
