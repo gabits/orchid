@@ -19,8 +19,9 @@ class BaseConfiguration(Configuration):
     # TODO: make secret key an environment variable
     SECRET_KEY = values.Value(environ_prefix=None, default='LOCAL')
 
-    # SECURITY WARNING: don't run with debug turned on in production!
+    # Development configuration
     DEBUG = values.BooleanValue(environ_prefix=None, default=False)
+
     ALLOWED_HOSTS = values.ListValue(['*'])
 
     DJANGO_APPS = [
