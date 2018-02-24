@@ -1,14 +1,11 @@
 from django.db import models
 
-from .gallery import Gallery
-
 
 class GallerySection(models.Model):
     """Section of a specific gallery, containing a theme and an optional
     description, and it's linked to PortfolioWork's it'll display.
     """
 
-    gallery = models.ForeignKey(Gallery, related_name='sections', null=True)
     theme = models.CharField(max_length=120, null=True)
 
     # Styling purposes; still don't know if it's a good idea and will
@@ -19,6 +16,7 @@ class GallerySection(models.Model):
         verbose_name = 'gallery_section'
         verbose_name_plural = 'gallery_sections'
         db_table = 'gallery_sections'
+        app_label = 'gallery'
 
         permissions = (
             ('create_section', 'Can create a new section in the gallery'),
