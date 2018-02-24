@@ -10,7 +10,7 @@ class BaseConfiguration(Configuration):
 
     DJANGO_SETTINGS_MODULE = values.Value(environ_prefix=None, default='config.settings.local')
 
-    PROJECT_NAME = 'Portfolio'
+    PROJECT_NAME = 'Orchid'
 
     BASE_DIR = Path(__file__) - 3           # orchid/portfolio/config/settings/base.py - 3 = orchid/portfolio/
     ROOT_URLCONF = 'config.urls'
