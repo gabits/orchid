@@ -15,7 +15,7 @@ class BaseConfiguration(Configuration):
     SECRET_KEY = 'TEST'
 
     # Development configuration
-    DEBUG = values.Value(environ_prefix=None, default=True)
+    DEBUG = values.Value(environ_prefix=None, default=False)
     ALLOWED_HOSTS = values.ListValue(['*'])
 
 
