@@ -15,6 +15,17 @@ html {
 h1 {
     /* Alignment */
     text-align: center;
+}
+
+
+h1:hover {
+    color: #9ae2ff;
+}
+
+
+#main-title {
+    /* Alignment */
+    margin: 2em;
 
     /* Font */
     text-transform: lowercase;
@@ -24,13 +35,9 @@ h1 {
 }
 
 
-h1:hover {
-    color: #9ae2ff;
-}
-
-
-h1#main-title {
-   margin: 2em;
+#main-title img.icon {
+    width: 0.8em;
+    margin: -0.1em;
 }
 
 
