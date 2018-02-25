@@ -1,0 +1,21 @@
+#main-title {
+    /* Alignment */
+    margin: 2em;
+
+    /* Font */
+    text-transform: lowercase;
+    font-size: 2rem;
+    color: #71ddff;
+    text-shadow: 1px 1px #777777;
+}
+
+
+#main-title h1:hover {
+    color: #9ae2ff;
+}
+
+
+#main-title img.icon {
+    width: 0.8em;
+    margin: -0.1em;
+}
