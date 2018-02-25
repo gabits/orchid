@@ -17,8 +17,18 @@ It'll also involve a separate section of pre-approved **articles** to be posted 
 
 ## Installation
 
+### Requirements
 In your preferred virtual environment for this purpose, in the top directory of the repository (`orchid`), run in the bash shell:
 
 `$ pip install -r requirements.txt`
 
 Add a file named `.env` in the top directory as well and manipulate environment variables from there.
+
+### Storage
+Install Postgres and create a new database named as you prefer, defaulted to `orchid`, and indicate its URL in the `.env` file.
+
+`$ brew install postgresql`
+
+
+## Runing the application
+`$ application/manage.py runserver`
