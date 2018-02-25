@@ -7,7 +7,7 @@ html {
     background-color: #171121;
 
     /* Font */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inconsolata', monospaced;
     font-color: #217a6e;
 }
 
@@ -17,9 +17,53 @@ h1 {
     text-align: center;
 
     /* Font */
-    font-family: 'Inconsolata', monospaced;
     text-transform: lowercase;
     font-size: 2rem;
     color: #71ddff;
     text-shadow: 1px 1px #777777;
+}
+
+
+h1:hover {
+    color: #9ae2ff;
+}
+
+
+h1#main-title {
+   margin: 2em;
+}
+
+
+.main-body {
+    /* Container structure */
+    max-width: 900px;
+    min-height: 900px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+
+    /* Alignment */
+    margin: 0 auto;
+
+    /* Background */
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+.text {
+    padding: 2em 3em;
+    color: #353140;
+    font-weight: 500;
+    line-height: 1.8;
+    text-indent: 2em;
+}
+
+
+.text-article {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.text-article p {
+    margin: 1.5em 0;
 }

@@ -1,4 +1,14 @@
 /* Main file for grouping and import all CSS files */
 
 
+/*      Website color palette
+
+#171121     light blue
+#6AE863     light green
+#FF4745     light red
+#171121     dark purple
+
+*/
+
+
 @import url('basic_structure.css');
