@@ -6,7 +6,7 @@ import configurations
 from os.path import join, dirname
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     # Set default configuration to Local
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')

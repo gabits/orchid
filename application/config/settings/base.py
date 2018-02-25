@@ -36,6 +36,7 @@ class BaseConfiguration(Configuration):
     CUSTOM_APPS = [
         # Project apps by dependency chain
         'dashboard',
+        'articles',
         'gallery',
         'works',
     ]
@@ -53,23 +54,28 @@ class BaseConfiguration(Configuration):
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
-    
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
             'DIRS': [(BASE_DIR + 'templates/'),
-                     (BASE_DIR + 'common/templates/')],
+                     (BASE_DIR + '/templates/')],
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
                     'django.template.context_processors.debug',
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
+                    'django.template.context_processors.media',
+                    'django.template.context_processors.static',
                     'django.contrib.messages.context_processors.messages',
                 ],
             },
         },
     ]
+
+    # Media
+    MEDIA_ROOT = str(BASE_DIR) + 'media/'
+    MEDIA_URL = '/media/'
 
     # Data storage
     DATABASES = {
@@ -108,8 +114,11 @@ class BaseConfiguration(Configuration):
 
 
     # Static files
-    STATIC_URL = '/static/'
+    STATIC_URL = '/static/files/'
     # TODO: understand how to do it through django-environ instead of stringifying
     STATICFILES_DIRS = [
-        join(str(BASE_DIR), 'static'),
+        join(str(BASE_DIR), 'static/files/'),
+        join(str(BASE_DIR), 'media/'),
     ]
+
+    STATIC_ROOT = str(BASE_DIR) + '/static/build/'
