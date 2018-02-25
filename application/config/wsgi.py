@@ -3,7 +3,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'orchid.config.settings.local')
-os.environ.setdefault("DJANGO_CONFIGURATION", 'Local')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'orchid.config.settings.local')
+os.environ.setdefault('DJANGO_CONFIGURATION', 'Local')
 
 application = get_wsgi_application()

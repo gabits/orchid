@@ -1,3 +1,4 @@
-/* Main file for grouping and import specific CSS files */
+/* Main file for grouping and import all CSS files */
 
-@import url("basic_structure.css");
+
+@import url('basic_structure.css');

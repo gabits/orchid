@@ -1,25 +1,25 @@
-/* Imported in the main.css file */
-
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-* {
-    /* Font */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-    font-color: #217a6e;
-
-}
 
 
 html {
     /* Background */
-    background-color: #ff8b9e;
+    background-color: #171121;
+
+    /* Font */
+    font-family: 'Roboto', sans-serif;
+    font-color: #217a6e;
 }
 
 
 h1 {
+    /* Alignment */
     text-align: center;
-    color: #ffffff;
+
+    /* Font */
+    font-family: 'Inconsolata', monospaced;
+    text-transform: lowercase;
+    font-size: 2rem;
+    color: #71ddff;
+    text-shadow: 1px 1px #777777;
 }
