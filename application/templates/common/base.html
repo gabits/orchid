@@ -1,32 +1,39 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
+    <!--Meta information-->
     <meta charset="UTF-8">
+    {#    TODO: do NOT hardcode the title; instead retrieve from models definition#}
+    <title>Orchid</title>
 
-    <!--TODO: make description, keywords and title "less hardcoded"-->
+    {#    TODO: make description, keywords and title "less hardcoded"#}
     <meta name="author" content="Gabriela M Valle">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="Artistic">
     <meta name="keywords" content="portfolio, work, art, web development, code">
+    <!--/Meta information-->
 
     <!-- Styling -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
-    <!--TODO: not hardcode the title; instead retrieve from models definition-->
-    <title>Gallery</title>
+    <!--/Styling-->
 </head>
 
 
 <body>
+<header>
+
+    {% include 'common/header.html' %}
+
+</header>
+
+
 <main>
 
-    <section class="dashboard">
-    {% block content %}
+    {% include 'common/navigation.html' %}
 
-    {% endblock %}
-    </section>
+    {% block content %}{% endblock %}
 
 </main>
 </body>
