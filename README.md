@@ -2,15 +2,19 @@
 
 ## Development
 
-This is currently a project in its initial stage of development. External contributions are welcome in the form of code reviews, critics and suggestions. One of the original purposes with this is to grow and consolidate my skills developing web applications, but if you'd like to contribute as a designer or developer, please get in contact.
+This is currently a project in its initial stage of development. External contributions are welcome in the form of code reviews, critics and suggestions. One of the original purposes with this is to grow and consolidate my skills developing web applications, but if you'd like to contribute as a designer or developer, feel free to get in touch.
 
 
 ## The project
 
-The idea is to build a **open-source** website where registered users can create profiles and post *original content* produced by them. The publications can be posted in the form of **pictures**, **audio**, **video**, **text**. Users will also be able to upload *short code scripts* which can be ran when visiting their profiles, generating a *personalised user experience* to each profile visited. 
+The idea is to build an **open-source** website where registered users can create profiles and post *original content* produced by them. The publications can be posted in the form of **pictures**, **audio**, **video**, **text**. Users will also be able to upload *short code scripts* which can be ran when visiting their profiles, generating a *personalised user experience* for each personal page. 
 
-It'll also involve a separate section of pre-approved **articles** to be posted for discussions, which will be related to the type of content vehiculed by the website.
+It'll also involve a separate section of **articles** to be posted for discussions, relating to the type of content vehiculed by the website.
 
+
+# Tools
+
+This application is built in Python using Django framework for web applications.
 
 
 # Instructions of use
@@ -24,11 +28,20 @@ In your preferred virtual environment for this purpose, in the top directory of 
 
 Add a file named `.env` in the top directory as well and manipulate environment variables from there.
 
-### Storage
-Install Postgres and create a new database named as you prefer, defaulted to `orchid`, and indicate its URL in the `.env` file.
+### Storage and initial setup
+The application uses Postgres as the default database, so make sure you have that installed. The version using during development was 9.6. 
+You can change the `DATABASES` `ENGINE` in the base settings if you prefer to use a different database as well.
 
-`$ brew install postgresql`
+1. Create a new database named `orchid`, and set the DATABASE_URL in the `.env` file.
+
+2. Run initial migrations for the app from the top directory:
+
+    `$ application/manage.py runserver`
 
 
 ## Runing the application
+Start the server from the top directory:
+
 `$ application/manage.py runserver`
+
+Access the website at `localhost:8000`.
