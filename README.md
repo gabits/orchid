@@ -14,7 +14,8 @@ It'll also involve a separate section of **articles** to be posted for discussio
 
 # Tools
 
-This application is built in Python using Django framework for web applications.
+This application is built in Python using the Django framework for web applications. Styling and design use HTML5 and CSS.
+
 
 
 # Instructions of use
