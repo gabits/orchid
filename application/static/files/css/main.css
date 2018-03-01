@@ -13,6 +13,7 @@
 
 /* Keep those in dependency chain order */
 
-@import url('base.css');
-@import url('header.css');
+@import url('common/base_style.css');
+@import url('common/header.css');
+@import url('common/menu.css');
 @import url('articles.css');
