@@ -39,6 +39,7 @@ class BaseConfiguration(Configuration):
         'articles',
         'gallery',
         'works',
+        'static',
     ]
 
     INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
@@ -74,8 +75,8 @@ class BaseConfiguration(Configuration):
     ]
 
     # Media
-    MEDIA_ROOT = str(BASE_DIR) + 'media/'
     MEDIA_URL = '/media/'
+    MEDIA_ROOT = str(BASE_DIR) + 'media/'
 
     # Data storage
     DATABASES = {
@@ -112,13 +113,18 @@ class BaseConfiguration(Configuration):
     TIME_ZONE = 'UTC'
     USE_TZ = True
 
+    #
+    #   Static files
+    #
 
-    # Static files
-    STATIC_URL = '/static/files/'
-    # TODO: understand how to do it through django-environ instead of stringifying
+    # This is the folder where static files are
+    STATIC_URL = '/static/'
+
+    # Folder where static files are searched by Django
     STATICFILES_DIRS = [
-        join(str(BASE_DIR), 'static/files/'),
-        join(str(BASE_DIR), 'media/'),
+        join(str(BASE_DIR), 'static'),
+        join(str(BASE_DIR), 'media'),
     ]
 
-    STATIC_ROOT = str(BASE_DIR) + '/static/build/'
+    # Where staticfiles are collected into
+    # STATIC_ROOT = str(BASE_DIR) + '/builds/'
