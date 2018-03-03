@@ -1,0 +1,15 @@
+#menu {
+    /* Structure */
+    min-height: 30em;
+    background-color: #ae89ff;
+
+    /* Alignment */
+    float: left;
+}
+
+
+#menu nav {
+    list-style-type: none;
+    float: right;
+}
+
