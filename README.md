@@ -46,3 +46,13 @@ Start the server from the top directory:
 `$ application/manage.py runserver`
 
 Access the website at `localhost:8000`.
+
+
+## Serving staticfiles
+
+
+Collect static files in order to serve them from the `builds` directory. You can do this by running from the top directory:
+
+    `$ application/manage.py collectstatic`
+
+_This process will be changed soon as it's not ideal having to build the front-end when running the application locally._
