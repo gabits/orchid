@@ -1,8 +1,10 @@
-{#{% extends 'common/base.html' %}#}
+{% extends 'common/base.html' %}
 {% load static %}
 
-{# for article in articles #}
-<section class="article">
-    {% include 'articles/article_detail.html' %}
-</section>
-{# endfor #}
+{% block content %}
+    {% for article in article_list %}
+    <section class="article">
+        {% include 'articles/article_detail.html' %}
+    </section>
+    {% endfor %}
+{% endblock %}

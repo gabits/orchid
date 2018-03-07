@@ -27,4 +27,4 @@ psycopg2==2.7.3.2
 #   Timezone calculation
 #
 
-pytz==2017.2
+pytz==2017.

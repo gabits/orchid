@@ -8,7 +8,8 @@ from configurations import Configuration, values
 
 class BaseConfiguration(Configuration):
 
-    DJANGO_SETTINGS_MODULE = values.Value(environ_prefix=None, default='config.settings.local')
+    DJANGO_SETTINGS_MODULE = values.Value(environ_prefix=None,
+                                          default='config.settings.local')
 
     PROJECT_NAME = 'Orchid'
 
@@ -118,7 +119,7 @@ class BaseConfiguration(Configuration):
     #
 
     # This is the folder where static files are
-    STATIC_URL = '/builds/'
+    STATIC_URL = '/buildsg/'
 
     # Folder where static files are searched by Django
     STATICFILES_DIRS = [
