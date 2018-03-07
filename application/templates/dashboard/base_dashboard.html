@@ -1,11 +1,10 @@
 {% extends 'common/base.html' %}
 {% load static %}
 
-{% block content %}
-    <header id="main-title">
-        <h1><img class="icon" src="{% static 'icons/orchid.svg' %}" alt="Orchid icon"> Orchid</h1>
-    </header>
-    <section class="main-body">
-        {% include 'articles/article_list.html' %}
-    </section>
-{% endblock %}
+<header id="main-title">
+    <h1><img class="icon" src="{% static 'icons/orchid.svg' %}" alt="Orchid icon"> Orchid</h1>
+</header>
+<section class="main-body">
+    {% block content %}
+    {% endblock %}
+</section>

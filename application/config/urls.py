@@ -7,4 +7,5 @@ urlpatterns = [
 
     url(r'^', include('dashboard.urls')),
     url(r'^gallery', include('gallery.urls')),
+    url(r'^articles', include('articles.urls')),
 ]
