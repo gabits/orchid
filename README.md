@@ -25,7 +25,7 @@ This application is built in Python using the Django framework for web applicati
 ### Requirements
 In your preferred virtual environment for this purpose, in the top directory of the repository (`orchid`), run in the bash shell:
 
-`$ pip install -r requirements.txt`
+    `$ pip install -r requirements.txt`
 
 Add a file named `.env` in the top directory as well and manipulate environment variables from there.
 
@@ -43,7 +43,7 @@ You can change the `DATABASES` `ENGINE` in the base settings if you prefer to us
 ## Runing the application
 Start the server from the top directory:
 
-`$ application/manage.py runserver`
+    `$ application/manage.py runserver`
 
 Access the website at `localhost:8000`.
 
