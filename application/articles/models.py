@@ -1,3 +1,25 @@
 from django.db import models
 
-# Create your models here.
+
+class Article(models.Model):
+    """A self-contained purely written content which can be written, stored
+    and published by an user. Its principal components are a title, subtitle and
+    the main content.
+    """
+    title = models.CharField(max_length=255,
+                             help_text="A title for the article.")
+    subtitle = models.CharField(max_length=255,
+                                help_text="A quick description of the article "
+                                          "to make it compelling for other "
+                                          "users to read it. Maximum of 255 "
+                                          "characters.")
+    main_text = models.TextField(help_text="Your article.")
+
+    # Datetime records
+    created_at = models.DateTimeField(help_text="The initial time the article "
+                                                "has been created.")
+    published_at = models.DateTimeField(help_text="The timestamp when the "
+                                                  "article was first published.")
+
+    # TODO: Add AuditLog here. This is the main reason why there's no timestamp
+    # for the editions here.

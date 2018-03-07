@@ -118,7 +118,7 @@ class BaseConfiguration(Configuration):
     #
 
     # This is the folder where static files are
-    STATIC_URL = '/builds/'
+    STATIC_URL = '/buildsg/'
 
     # Folder where static files are searched by Django
     STATICFILES_DIRS = [
