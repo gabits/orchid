@@ -1,8 +1,10 @@
-{% extends 'dashboard/base_dashboard.html' %}
+{% extends 'common/base.html' %}
 {% load static %}
 
-{#{% for article in articles %}#}
+{% block content %}
+    {% for article in article_list %}
     <section class="article">
         {% include 'articles/article_detail.html' %}
     </section>
-{#{% endfor %}#}
+    {% endfor %}
+{% endblock %}

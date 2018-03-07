@@ -7,13 +7,14 @@ class Article(models.Model):
     and published by an user. Its principal components are a title, subtitle and
     the main content.
     """
-    title = models.CharField(max_length=255, null=False, blank=False,
+    title = models.CharField(max_length=255, default='Article Title',
                              help_text="A title for the article.")
     subtitle = models.CharField(null=True, blank=True, max_length=255,
                                 help_text="A quick description of the article to make it "
                                           "compelling for other users to read it. Maximum "
                                           "of 255 characters.")
-    main_text = models.TextField(help_text="Your article.")
+    content = models.TextField(default='Lorem ipsum sit dolor amet.',
+                               help_text="Your article content.")
 
     # TODO: Add author field pointing to the User model once accounts and
     # authentication are implemented.
