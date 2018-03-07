@@ -1,8 +1,10 @@
-from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+from django.views.generic import RedirectView
 
 
-class DashboardTemplateView(TemplateView):
+class DashboardTemplateView(RedirectView):
     """View for the first page users see when they visit the website.
     """
 
-    template_name = 'dashboard/base_dashboard.html'
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse_lazy('article_detail')

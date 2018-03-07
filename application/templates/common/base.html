@@ -15,25 +15,44 @@
     <meta name="keywords" content="portfolio, work, art, web development, code">
     <!--/Meta information-->
 
-    <!-- Styling -->
+    <!--Styling-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <!--/Styling-->
+
 </head>
 
 
 <body>
-<header>
 
-    {% include 'common/header.html' %}
+<!--Site header-->
+<header id="main-title">
+
+    <h1><img class="icon" src="{% static 'icons/orchid.svg' %}" alt="Orchid icon"> 
+        Orchid
+    </h1>
 
 </header>
+<!--/Site header-->
 
 
 <main>
 
+<!--Navigation Menu-->
     {% include 'common/navigation.html' %}
+<!--/Navigation Menu-->
 
-    {% block content %}{% endblock %}
+<!--Dashboard-->
+    <section class="dashboard">
+
+
+        <!--Main content-->
+        <section class="main-body">
+           {% block content %}
+           {% endblock %}
+        </section>
+        <!--/Main content-->
+
+    </section>
+<!--/Dashboard-->
 
 </main>
 </body>
