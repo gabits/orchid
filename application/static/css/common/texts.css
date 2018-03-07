@@ -1,0 +1,21 @@
+.text {
+    /* Alignment */
+    padding: 2em 3em;
+
+    /* Font */
+    color: #353140;
+    font-weight: 500;
+
+    /* Readability */
+    line-height: 1.8;
+}
+
+.text h2 {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.text h4 {
+    text-align: center;
+    margin: 1em 0;
+}
