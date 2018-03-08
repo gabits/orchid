@@ -3,7 +3,6 @@
     border: 1px solid transparent;
     border-radius: 30px;
 
-
     /* Background */
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -11,17 +10,11 @@
 
 .article-text p {
     /* Alignment */
-    margin: 1.5em 0;
+    margin: 1.5em;
 
     /* Font */
     font-family: 'Roboto', sans-serif;
 
     /* Paragraph */
     text-indent: 3em;
-}
-
-
-.text h2 {
-    text-align: center;
-    margin: 1em 0;
 }

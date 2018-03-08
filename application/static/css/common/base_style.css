@@ -6,15 +6,12 @@ html {
     /* Background */
     background-color: #171121;
 
+    /* Alignment */
+    text-align: center;
+
     /* Font */
     font-family: 'Inconsolata', monospaced;
     font-color: #217a6e;
-}
-
-
-h1 {
-    /* Alignment */
-    text-align: center;
 }
 
 
