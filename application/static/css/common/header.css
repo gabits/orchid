@@ -4,18 +4,25 @@
 
     /* Font */
     text-transform: lowercase;
-    font-size: 2rem;
     color: #71ddff;
     text-shadow: 1px 1px #777777;
 }
 
 
+.page-title h1 {
+    /* Font */
+    font-size: 4rem;
+}
+
+
 #main-title h1:hover {
+    /* Font */
     color: #9ae2ff;
 }
 
 
 #main-title img.icon {
+    /* Alignment */
     width: 0.8em;
     margin: -0.1em;
 }

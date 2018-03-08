@@ -1,38 +1,57 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
+    <!--Meta information-->
     <meta charset="UTF-8">
+    {#    TODO: do NOT hardcode the title; instead retrieve from models definition#}
+    <title>Orchid</title>
 
-    <!--TODO: make description, keywords and title "less hardcoded"-->
+    {#    TODO: make description, keywords and title "less hardcoded"#}
     <meta name="author" content="Gabriela M Valle">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="Artistic">
     <meta name="keywords" content="portfolio, work, art, web development, code">
+    <!--/Meta information-->
 
-    <!-- Styling -->
+    <!--Styling-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--/Styling-->
 
-    <!--TODO: do not hardcode the title; instead retrieve from models definition-->
-    <title>Gallery</title>
 </head>
 
 
 <body>
+
+<!--Site header-->
+<header id="main-title">
+
+    {% include 'common/header.html' %}
+
+</header>
+<!--/Site header-->
+
+
 <main>
 
+<!--Navigation Menu-->
+    {% include 'common/navigation.html' %}
+<!--/Navigation Menu-->
+
+<!--Dashboard-->
     <section class="dashboard">
 
-        <header id="main-title">
-            <h1><img class="icon" src="{% static 'icons/orchid.svg' %}" alt="Orchid icon"> Orchid</h1>
-        </header>
 
+        <!--Main content-->
         <section class="main-body">
-        {% block content %}{% endblock %}
+           {% block content %}
+           {% endblock %}
         </section>
+        <!--/Main content-->
 
     </section>
+<!--/Dashboard-->
 
 </main>
 </body>

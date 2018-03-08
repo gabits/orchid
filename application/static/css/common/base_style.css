@@ -6,15 +6,12 @@ html {
     /* Background */
     background-color: #171121;
 
+    /* Alignment */
+    text-align: center;
+
     /* Font */
     font-family: 'Inconsolata', monospaced;
     font-color: #217a6e;
-}
-
-
-h1 {
-    /* Alignment */
-    text-align: center;
 }
 
 
@@ -25,17 +22,4 @@ h1 {
 
     /* Alignment */
     margin: 0 auto;
-}
-
-
-.text {
-    /* Alignment */
-    padding: 2em 3em;
-
-    /* Font */
-    color: #353140;
-    font-weight: 500;
-
-    /* Readability */
-    line-height: 1.8;
 }

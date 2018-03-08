@@ -1,7 +1,10 @@
-<article class="text text-article">
-    <h2>{{ article.title }}</h2>
-    <h4>{{ article.subtitle }}</h4>
-    <p>
+<article class="text article-text">
+    <h1>{{ article.title }}</h1>
+    <h2>{{ article.subtitle }}</h2>
+
+    {# TODO: Replace created_at by published_at once the form that sets it is implemented #}
+    <h6>Published at {{ article.created_at }}</h6>
+    <p class="content">
         {{ article.content }}
     </p>
 </article>

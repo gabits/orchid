@@ -1,27 +1,44 @@
+#
 # Byte-compiled / optimized / DLL files
+#
+
 __pycache__/
 *.py[cod]
 *$py.class
 
 
-# OS files
+#
+#   OS files
+#
+
 .DS_Store
 
 
-# Project interpreter
+#
+#   Project interpreter
+#
+
 .idea/
 
 
+#
 # Environment variables file
+#
+
 .env
 
 
+#
 # Virtual Environments
+#
+
 .venv
 venv/
 ENV/
 _venv/
 
 
+#
 # Staticfiles builds
+#
 application/builds/

@@ -20,7 +20,7 @@ class Article(models.Model):
     # authentication are implemented.
 
     # Datetime records
-    created_at = models.DateTimeField(default=timezone.now,
+    created_at = models.DateTimeField(default=timezone.now, editable=False,
                                       help_text="The initial time the article has been "
                                                 "created.")
     published_at = models.DateTimeField(null=True,
