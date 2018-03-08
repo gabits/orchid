@@ -1,0 +1,11 @@
+# Guidelines for the Codebase
+
+## Architecture
+In all languages and frameworks used, the code should be as self-documented as possible.
+
+### Comments
+Those should follow each language's responsibilities TODOs should not be exposed to user-facing code such as static files.
+
+
+## HTML and CSS
+Comments: should be included mostly to organise, hierarchise and structure the code and reinforce its readability.
