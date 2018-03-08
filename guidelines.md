@@ -10,6 +10,8 @@ This is where the main concepts for development are described. Design and implem
 In all languages and frameworks used, the code should be as self-documented as possible.
 All apps and the interaction between them should be modular; all abstract concepts must be kept separate from concrete implementation.
 
+**Naming:** in order to have this system easy to develop with in the future and allow other developers to have a comprehensible, clear contact with it, there must be a strong concern around naming, which should be kept as explanative as possible. The language used within the application should refer to concepts consistently and abstraction is a focus to be exercised here.
+
 
 ### Tests
 
@@ -25,8 +27,6 @@ Those should follow each language's responsibilities; specific content for devel
 ## Python
 
 **Documentation:** DocStrings must be present to every public method and preferably for private methods as well.
-
-**Naming:** In order to have this system easy to develop with in the future and allow other developers to have a deeper contact with it, there must be a strong concern around naming which should be kept as specific and dry as possible.
 
 
 ## HTML and CSS
