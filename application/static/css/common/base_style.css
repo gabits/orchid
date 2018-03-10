@@ -15,11 +15,9 @@ html {
 }
 
 
-.main-body {
-    /* Container */
-    max-width: 900px;
-    min-height: 900px;
-
-    /* Alignment */
-    margin: 0 auto;
+header {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: 0 2em;
 }

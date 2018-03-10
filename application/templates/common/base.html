@@ -27,7 +27,13 @@
 <!--Site header-->
 <header id="main-title">
 
+    <!--Title and logo-->
     {% include 'common/header.html' %}
+    <!--/Title and logo-->
+
+    <!--Navigation Menu-->
+    {% include 'common/navigation.html' %}
+    <!--/Navigation Menu-->
 
 </header>
 <!--/Site header-->
@@ -35,23 +41,12 @@
 
 <main>
 
-<!--Navigation Menu-->
-    {% include 'common/navigation.html' %}
-<!--/Navigation Menu-->
-
-<!--Dashboard-->
+    <!--Dashboard-->
     <section class="dashboard">
-
-
-        <!--Main content-->
-        <section class="main-body">
-           {% block content %}
-           {% endblock %}
-        </section>
-        <!--/Main content-->
-
+       {% block content %}
+       {% endblock %}
     </section>
-<!--/Dashboard-->
+    <!--/Dashboard-->
 
 </main>
 </body>

@@ -1,15 +1,14 @@
-#menu {
-    /* Structure */
-    min-height: 30em;
-    background-color: #ae89ff;
+.menu {
 
-    /* Alignment */
-    float: left;
 }
 
 
-#menu nav {
+.menu nav {
+    /* Alignment */
+    text-align: center;
+    padding: 1.5em;
+
+    /* Structure */
     list-style-type: none;
-    float: right;
 }
 
