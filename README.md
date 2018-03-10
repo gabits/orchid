@@ -11,6 +11,8 @@ The idea is to build an **open-source** website where registered users can creat
 
 It'll also involve a separate section of **articles** to be posted for discussions, relating to the type of content vehiculed by the website.
 
+[Guidelines for the codebase](https://github.com/gabits/orchid/blob/master/guidelines.md) are defined as well and should be always consulted and improved as design and implementation take place.
+
 
 # Tools
 
