@@ -1,28 +1,29 @@
-#main-title {
+.main-title {
     /* Alignment */
-    margin: 2em;
+    margin: 3em;
+    float: left;
 
     /* Font */
     text-transform: lowercase;
-    color: #71ddff;
+    color: #8ccbff;
     text-shadow: 1px 1px #777777;
 }
 
 
-.page-title h1 {
-    /* Font */
-    font-size: 4rem;
+.main-title h1 {
+    font-size: 3rem;
 }
 
 
-#main-title h1:hover {
+.main-title h1:hover {
     /* Font */
     color: #9ae2ff;
 }
 
 
-#main-title img.icon {
+.main-title img.icon {
     /* Alignment */
-    width: 0.8em;
+    width: 3.7em;
     margin: -0.1em;
+    text-shadow: 1px 1px #777777;
 }

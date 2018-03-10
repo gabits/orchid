@@ -1,8 +1,6 @@
 .text {
     /* Alignment */
-    padding: 2em 3em;
     text-align: center;
-    margin: 1em 0;
 
     /* Font */
     color: #353140;
@@ -10,33 +8,4 @@
 
     /* Readability */
     line-height: 1.8;
-}
-
-
-.article-text .content {
-    /* Alignment */
-    text-align: left;
-
-    /* Paragraph structure*/
-    text-indent: 2%;
-}
-
-
-.article-text h1 {
-    /* Font */
-    font-size: 2.5rem;
-    margin: 1em;
-
-}
-
-.article-text h2 {
-    /* Font */
-    font-size: 1.3rem;
-    font-weight: 200;
-}
-
-
-.article-text h6 {
-    /* Font */
-    text-transform: capitalize;
 }

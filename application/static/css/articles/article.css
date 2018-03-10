@@ -1,4 +1,8 @@
 .article {
+    /* Alignment */
+    margin: 4em 3em;
+    padding: 2em;
+
     /* Style */
     border: 1px solid transparent;
     border-radius: 30px;
@@ -11,10 +15,30 @@
 .article-text p {
     /* Alignment */
     margin: 1.5em;
+    text-align: left;
 
     /* Font */
     font-family: 'Roboto', sans-serif;
 
     /* Paragraph */
-    text-indent: 3em;
+    text-indent: 2em;
+}
+
+
+.article-text h1 {
+    /* Font */
+    font-size: 2.5rem;
+    margin: 1em 0em;
+}
+
+.article-text h2 {
+    /* Font */
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+
+.article-text h6 {
+    /* Font */
+    text-transform: capitalize;
 }

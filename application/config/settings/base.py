@@ -40,7 +40,6 @@ class BaseConfiguration(Configuration):
         'articles',
         'gallery',
         'works',
-        'static',
     ]
 
     INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
