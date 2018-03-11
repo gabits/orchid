@@ -1,28 +1,40 @@
-#main-title {
+.main-title {
     /* Alignment */
-    margin: 2em;
+    margin: 0em 2em;
+    float: left;
 
     /* Font */
     text-transform: lowercase;
-    color: #71ddff;
+    color: #8ccbff;
     text-shadow: 1px 1px #777777;
 }
 
 
-.page-title h1 {
-    /* Font */
-    font-size: 4rem;
+.main-title h1 {
+    font-size: 2.3rem;
 }
 
 
-#main-title h1:hover {
+.main-title h1:hover {
     /* Font */
     color: #9ae2ff;
 }
 
 
-#main-title img.icon {
+.main-title img.icon {
     /* Alignment */
-    width: 0.8em;
-    margin: -0.1em;
+    width: 3.7em;
+    text-shadow: 1px 1px #777777;
+}
+
+
+.circle {
+    /* Structure */
+    height: 15em;
+    width: 15em;
+    border: transparent;
+    border-radius: 7.5em;
+
+    /* Color */
+    background-color: rgba(223, 243, 255, 0.8);
 }
