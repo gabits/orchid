@@ -16,15 +16,15 @@ urlpatterns = [
     url(r'^$', RedirectView.as_view(url=reverse_lazy('dashboard:test')), name='home'),
 
     # Apps URLConfs
-    url(r'^dashboard',
+    url(r'^dashboard/',
         include('dashboard.urls',
         namespace='dashboard')),
 
-    url(r'^gallery',
+    url(r'^gallery/',
         include('gallery.urls',
         namespace='gallery')),
 
-    url(r'^articles',
+    url(r'^articles/',
         include('articles.urls',
         namespace='articles')),
 ]
