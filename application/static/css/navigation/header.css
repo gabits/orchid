@@ -1,7 +1,6 @@
 .main-title {
     /* Alignment */
-    margin: 0em 2em;
-    float: left;
+    display: block;
 
     /* Font */
     text-transform: lowercase;
@@ -11,7 +10,8 @@
 
 
 .main-title h1 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
+    display: block;
 }
 
 
@@ -23,18 +23,22 @@
 
 .main-title img.icon {
     /* Alignment */
-    width: 3.7em;
+    margin: 0.6em 0.4em;
+    width: 3.4em;
+
+    /* Font */
     text-shadow: 1px 1px #777777;
 }
 
 
 .circle {
     /* Structure */
-    height: 15em;
-    width: 15em;
+    height: 7em;
+    width: 7em;
     border: transparent;
     border-radius: 7.5em;
+    margin-bottom: 3em;
 
     /* Color */
-    background-color: rgba(223, 243, 255, 0.8);
+    background-color: rgba(223, 243, 255, 0.4);
 }

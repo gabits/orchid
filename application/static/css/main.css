@@ -15,14 +15,15 @@
 
 /* Common page styles */
 @import url('common/base_style.css');
-@import url('common/header.css');
 @import url('common/texts.css');
 
 /* Dashboard */
 @import url('common/dashboard.css');
 
 /* Navigation */
+@import url('navigation/header.css');
 @import url('navigation/menu.css');
+@import url('navigation/navigation.css');
 
 /* Articles App */
 @import url('articles/article.css');
