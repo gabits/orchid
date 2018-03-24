@@ -7,4 +7,4 @@ class DashboardTemplateView(RedirectView):
     """
 
     def get_redirect_url(self, *args, **kwargs):
-        return reverse_lazy('article_detail')
+        return reverse_lazy('articles:article_detail')

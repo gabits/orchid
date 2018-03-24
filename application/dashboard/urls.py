@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     url(r'^$',
         views.DashboardTemplateView.as_view(),
-        name='dashboard'
+        name='test'
         ),
 ]
