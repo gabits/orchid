@@ -1,0 +1,30 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <form action="{{ request.path }}" method="POST">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <ul>
+                {% for field, error in form.errors.items %}
+                    <li>{{ field }}: {{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <label for="{{ form.title.name }}">{{ form.title.label }}</label>
+        <input type="text" id="{{ form.title.id_for_label }}" name="{{ form.title.name }}">
+
+        <label for="{{ form.subtitle.name }}">{{ form.subtitle.label }}</label>
+        <input type="text" id="{{ form.subtitle.id_for_label }}" name="{{ form.subtitle.name }}">
+
+        <label for="{{ form.content.name }}">{{ form.content.label }}</label>
+        <input type="text" id="{{ form.content.id_for_label }}" name="{{ form.content.name }}">
+
+        <input type="submit" value="OK">
+
+
+    </form>
+{% endblock %}

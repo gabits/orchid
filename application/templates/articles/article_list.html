@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <a href="{% url 'articles:add_article' %}">Add New Article</a>
     {% for article in article_list %}
     <section class="article">
         {% include 'articles/article_detail.html' %}
