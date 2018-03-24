@@ -21,7 +21,7 @@ class BaseConfiguration(Configuration):
     SECRET_KEY = values.Value(environ_prefix=None, default='LOCAL')
 
     # Development configuration
-    DEBUG = values.BooleanValue(environ_prefix=None, default=False)
+    DEBUG = values.BooleanValue(environ_prefix=None, default=True)
 
     ALLOWED_HOSTS = values.ListValue(['*'])
 
@@ -118,7 +118,7 @@ class BaseConfiguration(Configuration):
     #
 
     # This is the folder where static files are
-    STATIC_URL = '/buildsg/'
+    STATIC_URL = '/static/'
 
     # Folder where static files are searched by Django
     STATICFILES_DIRS = [

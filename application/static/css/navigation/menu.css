@@ -1,14 +1,15 @@
 .menu {
-
+    background-color: rgba(223, 243, 255, 0.4);
+    height: 30em;
+    width: 30em;
 }
 
-
-.menu nav {
+ul.navigation-links {
     /* Alignment */
     text-align: center;
     padding: 1.5em;
+    display: block;
 
     /* Structure */
     list-style-type: none;
 }
-
